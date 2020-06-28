@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from "rxjs";
-import { IUserCoords } from "../../../shared/interfaces";
-import { MatDialog } from "@angular/material/dialog";
-import { ModalLocationInfoComponent } from "../../../shared/modal-location-info/modal-location-info.component";
-import { INITIAL_COORDS } from "../../../shared/constants";
+import { BehaviorSubject } from 'rxjs';
+import { IUserCoords } from '../../../shared/interfaces';
+import { MatDialog } from '@angular/material/dialog';
+import { ModalLocationInfoComponent } from '../../../shared/modal-location-info/modal-location-info.component';
+import { INITIAL_COORDS } from '../../../shared/constants';
 
 @Injectable({
   providedIn: 'root'
@@ -22,7 +22,7 @@ export class UserLocationService {
           this.userLocation$.next({
             lon: position.coords.longitude,
             lat: position.coords.latitude
-          })
+          });
         },
         () => {
           this.openLocationModal();

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Subject } from "rxjs";
+import { BehaviorSubject, Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -17,11 +17,11 @@ export class PlaceFinderService {
 
   public getPlaces(map: google.maps.Map, marker: google.maps.places.PlaceResult): void {
     this.resetResults$.next(true);
-    let request = {
+    const request = {
       query: marker.name,
       fields: ['name', 'geometry']
     };
-    let service = new google.maps.places.PlacesService(map);
+    const service = new google.maps.places.PlacesService(map);
 
     if (marker.id) {
       this.createSingleMarker$.next(marker);

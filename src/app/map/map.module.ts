@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { MapRoutingModule } from './map-routing.module';
 import { MapComponent } from './map.component';
-import { SharedModule } from "../shared/shared.module";
+import { SharedModule } from '../shared/shared.module';
 import { ResultListComponent } from './result-list/result-list.component';
 import { PlaceDetailsComponent } from './place-details/place-details.component';
 

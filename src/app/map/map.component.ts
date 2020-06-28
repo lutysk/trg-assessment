@@ -1,9 +1,9 @@
 import { AfterViewInit, Component, ElementRef, OnDestroy, ViewChild } from '@angular/core';
-import { IUserCoords } from "../shared/interfaces";
-import { UserLocationService } from "../core/services/user-location/user-location.service";
-import { takeUntil } from "rxjs/operators";
-import { Subject } from "rxjs";
-import { PlaceFinderService } from "../core/services/place-finder/place-finder.service";
+import { IUserCoords } from '../shared/interfaces';
+import { UserLocationService } from '../core/services/user-location/user-location.service';
+import { takeUntil } from 'rxjs/operators';
+import { Subject } from 'rxjs';
+import { PlaceFinderService } from '../core/services/place-finder/place-finder.service';
 
 @Component({
   selector: 'app-map',
@@ -50,7 +50,7 @@ export class MapComponent implements AfterViewInit, OnDestroy {
         });
         this.map.panTo(mark.geometry.location);
         this.map.setZoom(15);
-      })
+      });
   }
 
   ngAfterViewInit(): void {

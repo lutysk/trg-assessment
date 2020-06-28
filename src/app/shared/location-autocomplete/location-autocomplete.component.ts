@@ -20,7 +20,7 @@ export class LocationAutocompleteComponent implements AfterViewInit {
   }
 
   private initAutocomplete(): void {
-    this.autocomplete = new google.maps.places.Autocomplete(this.locationInput.nativeElement, {})
+    this.autocomplete = new google.maps.places.Autocomplete(this.locationInput.nativeElement, {});
     this.autocomplete.bindTo('bounds', this.map);
 
     this.autocomplete.addListener('place_changed', (res) => {

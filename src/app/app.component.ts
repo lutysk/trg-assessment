@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {} from 'googlemaps';
-import { UserLocationService } from "./core/services/user-location/user-location.service";
+import { UserLocationService } from './core/services/user-location/user-location.service';
 
 @Component({
   selector: 'app-root',

@@ -1,8 +1,8 @@
-import { Component, HostListener, Input, OnDestroy } from '@angular/core';
-import { PlaceFinderService } from "../../core/services/place-finder/place-finder.service";
-import { takeUntil } from "rxjs/operators";
-import { Subject } from "rxjs";
-import { PageEvent } from "@angular/material/paginator";
+import { Component, Input, OnDestroy } from '@angular/core';
+import { PlaceFinderService } from '../../core/services/place-finder/place-finder.service';
+import { takeUntil } from 'rxjs/operators';
+import { Subject } from 'rxjs';
+import { PageEvent } from '@angular/material/paginator';
 
 @Component({
   selector: 'app-result-list',
@@ -30,11 +30,7 @@ export class ResultListComponent implements OnDestroy {
 
   public pagination: google.maps.places.PlaceSearchPagination;
   private markers: google.maps.Marker[] = [];
-  public paginatorLength: number = 20;
-
-  @HostListener('mouseover', ['$event'])
-  hoverLocation(event: MouseEvent) {
-  }
+  public paginatorLength = 20;
 
   constructor(private placeFinder: PlaceFinderService) {
     this.placeFinder.searchListPagination$
@@ -63,7 +59,7 @@ export class ResultListComponent implements OnDestroy {
       .subscribe(() => {
         this.dataList = [];
         this.dataListPagination = [];
-      })
+      });
   }
 
   private createMarkers(): void {
