@@ -1,0 +1,18 @@
+<div class="result-container" *ngIf="dataList?.length">
+  <div class="result-item" *ngFor="let item of dataList; index as i" (mouseover)="highlightMarker(i)"
+       (mouseleave)="removeHighlight(i)">
+    <h4>{{ item.name }}</h4>
+    <div class="rating">
+      <p>{{ item.rating }} <span class="reviews">({{ item.user_ratings_total }})</span></p>
+    </div>
+    <div class="description">
+      <p class="address">{{ item.formatted_address }}</p>
+      <p class="phone"></p>
+    </div>
+  </div>
+  <mat-paginator [length]="paginatorLength"
+                 [pageSize]="20"
+                 (page)="changePage($event)"
+                 [hidePageSize]="true">
+  </mat-paginator>
+</div>

@@ -1,0 +1,31 @@
+.result-container {
+  position: absolute;
+  z-index: 10;
+  background: white;
+  width: 30%;
+  height: 97%;
+  overflow: scroll;
+  padding-top: 3%;
+}
+
+.result-item {
+  padding: 2em;
+  border-bottom: 1px solid lightgrey;
+
+  &:hover {
+    background: #fafafa;
+    cursor: pointer;
+  }
+
+  h4 {
+    font-weight: bold;
+  }
+
+  .rating {
+    color: orange;
+
+    .reviews {
+      color: lightgrey;
+    }
+  }
+}

@@ -1,0 +1,5 @@
+<app-location-autocomplete (setMarker)="setMarker($event)" [map]="map" *ngIf="map"></app-location-autocomplete>
+<app-result-list [map]="map"></app-result-list>
+<div #gmap id="gmap"></div>
+
+<router-outlet></router-outlet>
